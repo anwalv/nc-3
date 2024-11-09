@@ -1,0 +1,2 @@
+I used artificial intelligence to help with the generation of scripts and proxyServer.service, and also partly to write README and html files. 
+I searched for all the not-funny and funny jokes myself.

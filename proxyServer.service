@@ -1,0 +1,16 @@
+[Unit]
+Description=Proxy Server Service
+After=apache2.service
+Wants=apache2.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sudo /usr/bin/socat TCP4-LISTEN:80,fork,pktinfo system:/etc/proxyServer.sh
+User=root
+Group=root
+Environment=SOCAT_PEERADDR=%H
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
